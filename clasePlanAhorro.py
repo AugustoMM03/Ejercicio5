@@ -1,11 +1,13 @@
 class PlanAhorro:
-    def __init__(self, codigo = 0, modelo = '', version = '', valor = 0, cuotas = 0, licitacion = 0):
+    
+    __cuotas = 60
+    __licitacion = 10
+    
+    def __init__(self, codigo = 0, modelo = '', version = '', valor = 0):
         self.__codigo = codigo
         self.__modelo = modelo
         self.__version = version
         self.__valor = valor
-        self.__cuotas = cuotas
-        self.__licitacion = licitacion
         
     def actualizarValor(self, nuevoValor):
         self.__valor = nuevoValor
@@ -26,12 +28,17 @@ class PlanAhorro:
     def getValor(self):
         return self.__valor
     
-    def getCuotas(self):
-        return self.__cuotas
+    @classmethod
+    def getCuotas(cls):
+        return cls.__cuotas
     
-    def getLicitacion(self):
-        return self.__licitacion
+    @classmethod
+    def getLicitacion(cls):
+        return cls.__licitacion
     
-    def modificarLicitacion(self, nuevacifra):
-        self.__licitacion = nuevacifra
+    @classmethod
+    def modificarLicitacion(cls, nuevacifra):
+        cls.__licitacion = nuevacifra
+
+
 

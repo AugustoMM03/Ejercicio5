@@ -1,5 +1,6 @@
 from menu import MenuOpciones
 from manejadorPlanAhorro import ManejadorPlanAhorro as MPA
+from clasePlanAhorro import PlanAhorro as PA
 
 def test():
     controlador = MPA()
@@ -11,3 +12,4 @@ def test():
 if __name__ == "__main__":
 
     test()
+

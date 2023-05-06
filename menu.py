@@ -3,13 +3,14 @@ class MenuOpciones:
         self.__opcion = None
 
     def opciones(self,lista):
-        while self.__opcion != 5:
+        while self.__opcion != 6:
             print("Menu de opciones: ")
             print("1)- Actualizar el valor del vehiculo de cada plan.")
             print("2)- Mostrar codigo del plan, modelo y version del vehiculo cuyo valor de la cuota sea inferior al valor dado.")
             print("3)- Mostrar el monto que se debe pagar para licitar vehiculo.")
             print("4)- Modificar la cantidad de cuotas que debe tener pagas para licitar un plan")
-            print("5)- SALIR")            
+            print("5)- Mostrar lista")
+            print("6)- SALIR")            
             self.__opcion = int(input ("Seleccione una opcion: "))
 
             if self.__opcion == 1:
@@ -25,4 +26,7 @@ class MenuOpciones:
             elif self.__opcion == 4:
                 codigo = int(input("Ingrese un codigo de plan para modificar la licitacion: "))
                 lista.modificarCuotas(codigo)
+
+            elif self.__opcion == 5:
+                lista.mostrarLista()
     

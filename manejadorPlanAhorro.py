@@ -12,9 +12,7 @@ class ManejadorPlanAhorro:
             mod = str(fila[1])
             ver = str(fila [2])
             val = float(fila[3])
-            cuo = int(fila[4])
-            lic = int(fila[5])
-            plan = PA(cod,mod,ver,val,cuo,lic)
+            plan = PA(cod,mod,ver,val)
             self.__listaPlanes.append(plan)
         return self.__listaPlanes
 
@@ -48,3 +46,7 @@ class ManejadorPlanAhorro:
         lic = int(input("Ingrese la nueva cantidad de cuotas que se debe tener pagas para licitar: "))
         self.__listaPlanes[iplan].modificarLicitacion(lic)
         print("Se modifico la cantidad de cuotas para licitacion ({})". format(self.__listaPlanes[iplan].getLicitacion()))
+
+    def mostrarLista(self):
+        for iplan in range (len(self.__listaPlanes)):
+            print("{}\t{}\t{}\t{}\t{}\t{}".format(self.__listaPlanes[iplan].getCodigo(),self.__listaPlanes[iplan].getModelo(),self.__listaPlanes[iplan].getVersion(),self.__listaPlanes[iplan].getValor(),self.__listaPlanes[iplan].getCuotas(),self.__listaPlanes[iplan].getLicitacion()))
