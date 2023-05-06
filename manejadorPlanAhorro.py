@@ -41,11 +41,9 @@ class ManejadorPlanAhorro:
         else:
             return iplan 
 
-    def modificarCuotas(self, codigo):
-        iplan = self.buscarPlan(codigo)
-        lic = int(input("Ingrese la nueva cantidad de cuotas que se debe tener pagas para licitar: "))
-        self.__listaPlanes[iplan].modificarLicitacion(lic)
-        print("Se modifico la cantidad de cuotas para licitacion ({})". format(self.__listaPlanes[iplan].getLicitacion()))
+    def modificarCuotas(self, cuotas):
+        PA.modificarLicitacion(cuotas)
+        print("Se modifico la cantidad de cuotas para licitacion ({})". format(PA.getLicitacion()))
 
     def mostrarLista(self):
         for iplan in range (len(self.__listaPlanes)):

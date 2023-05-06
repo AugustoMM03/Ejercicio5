@@ -24,8 +24,8 @@ class MenuOpciones:
                 lista.montoParaLicitar()
 
             elif self.__opcion == 4:
-                codigo = int(input("Ingrese un codigo de plan para modificar la licitacion: "))
-                lista.modificarCuotas(codigo)
+                newcuotas = int(input("Ingrese la nueva cantidad de cuotas para licitar: "))
+                lista.modificarCuotas(newcuotas)
 
             elif self.__opcion == 5:
                 lista.mostrarLista()
